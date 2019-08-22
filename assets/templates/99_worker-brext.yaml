@@ -1,0 +1,24 @@
+apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfig
+metadata:
+  labels:
+    machineconfiguration.openshift.io/role: worker
+  name: 99-worker-brext
+spec:
+  config:
+    ignition:
+      version: 2.2.0
+    storage:
+      files:
+      - contents:
+          verification: {}
+          source: 'data:text/plain;charset=utf-8;base64,REVWSUNFPWVuczQKQlJJREdFPWJyZXh0Ck9OQk9PVD15ZXMKTk1fQ09OVFJPTExFRD15ZXMKQk9PVFBST1RPPW5vbmUK'
+        filesystem: root
+        mode: 0644
+        path: /etc/sysconfig/network-scripts/ifcfg-ens4
+      - contents:
+          verification: {}
+          source: 'data:text/plain;charset=utf-8;base64,REVWSUNFPWJyZXh0Ck5BTUU9YnJleHQKVFlQRT1CcmlkZ2UKT05CT09UPXllcwpOTV9DT05UUk9MTEVEPXllcwpCT09UUFJPVE89ZGhjcA=='
+        filesystem: root
+        mode: 0644
+        path: /etc/sysconfig/network-scripts/ifcfg-brext
