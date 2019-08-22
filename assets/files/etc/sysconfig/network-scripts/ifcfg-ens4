@@ -1,5 +1,0 @@
-DEVICE=ens4
-BRIDGE=brext
-ONBOOT=yes
-NM_CONTROLLED=yes
-BOOTPROTO=none
